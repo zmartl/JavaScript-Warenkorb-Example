@@ -1,4 +1,4 @@
-# JavaScript-Warenkorb-Example ![data](https://img.shields.io/badge/Status-development-orange.svg)
+# JavaScript-Warenkorb-Example ![data](https://img.shields.io/badge/status-completed-green.svg)
 A simple example of an shopping page
 
 ## Javascript and Jquery functions
