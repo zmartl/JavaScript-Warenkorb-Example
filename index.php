@@ -1,5 +1,6 @@
 <html>
 <head>
+    <title>JavaScript shopping basket Example</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons">
 
