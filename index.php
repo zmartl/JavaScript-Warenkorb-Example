@@ -122,7 +122,7 @@
                     <h4 class="modal-title" id="myModalLabel">Warenkorb</h4>
                 </div>
                 <div class="modal-body" id="chartContent">
-
+                    <input name="count" hidden="hidden" id="count" /> 
                 </div>
                 <div class="modal-footer">
                     <input type="number" hidden="hidden" readonly name="warenkorb" />
@@ -153,14 +153,16 @@
             // set the content of the modal, which pop up when user click on the shopping basket icon
             document.getElementById("chartContent").innerHTML += "<div class='row'><div class='col-md-10'><img src=" + $(this).find("img").attr("src") + "alt='product' width='100'/>" + $(this).find(".panel-heading").find(".productName").prop("innerHTML") + "<br/></div><div class='col-md-2'>" + 
             $(this).find(".panel-body").find(".price").prop("innerHTML") + "</div><input name='productOrder' value=" + $(this).find(".panel-heading").find("input").attr("value") + " hidden='hidden'/></div>";        
+            document.getElementById("count").value = countClick;
             console.log("Element added");
+            
         });
-
 </script>
     <?php
 if(isset($_POST["warenkorb"])){
     if(isset($_POST['productOrder'])) {
-        ?><script type="text/javascript">swal('Deine Bestellung wurde erfolgreich versendet!', 'Oder auch doch nicht ¯\_(ツ)_/¯', 'success')</script><?php 
+        ?><script type="text/javascript">swal('Deine Bestellung wurde erfolgreich versendet! Sie enthielt ' + <?php echo $_POST['count'];  ?> + ' Produkte', 'Oder auch doch nicht ¯\_(ツ)_/¯', 'success')</script>
+        <?php 
     }
 }
 ?>
